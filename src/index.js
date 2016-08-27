@@ -28,7 +28,7 @@ var init = function(){
     hue.nupnpSearch().then(function(bridge){
         var hostname = bridge[0].ipaddress;
         //var hostname = '192.168.2.126';
-        var username = process.env.CRIB_USERNAME;
+        var username = process.env.CRIB_HUE_USERNAME;
 
         api = new hue.HueApi(hostname, username);
 
@@ -147,10 +147,12 @@ const recallScene = function(name){
 
 };
 
+buss.on('HUE_RECALL',function(data){
+    log.info('Recalling scene ',data);
+    recallScene(data[0]);
+});
+
 module.exports = function (config) {
-    buss.on('HUE_RECALL',function(data){
-        log.info('Recalling scene ',data);
-        recallScene(data[0]);
-    });
+
 };
 
