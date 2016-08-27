@@ -28,7 +28,7 @@ var init = function(){
     hue.nupnpSearch().then(function(bridge){
         var hostname = bridge[0].ipaddress;
         //var hostname = '192.168.2.126';
-        var username = '18554a6252a06d7126a4d7ef739ce3';
+        var username = process.env.CRIB_USERNAME;
 
         api = new hue.HueApi(hostname, username);
 
