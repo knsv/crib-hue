@@ -1,0 +1,27 @@
+{
+  "name": "crib-hue",
+  "version": "0.1.0",
+  "description": "Service for managing hue lights in the crib home automation system.",
+  "main": "./src/api.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/knsv/crib-hue.git"
+  },
+  "keywords": [
+    "home",
+    "automation"
+  ],
+  "author": "Knut Sveidqvist",
+  "license": "GPL-3.0",
+  "bugs": {
+    "url": "https://github.com/knsv/crib-hue/issues"
+  },
+  "homepage": "https://github.com/knsv/crib-hue#readme",
+  "dependencies": {
+    "lodash": "^4.14.1",
+    "q": "^1.4.1"
+  }
+}
