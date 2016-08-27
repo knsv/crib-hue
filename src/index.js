@@ -154,6 +154,3 @@ module.exports = function (config) {
     });
 };
 
-var conf = require(process.cwd() + '/crib.conf.js');
-module.exports(conf);
-
