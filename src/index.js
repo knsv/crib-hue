@@ -145,7 +145,7 @@ const setLight = (lightName, r, g, b, br) => {
     const lamp = lightsDb[lightName];
 
     //const state = lightState.create().on().rgb(255,222,76).brightness(20);
-    if(br === 0){
+    if(br < 1){
       const state = lightState.create().on(false);
       api.setLightState(lamp.id, state);
     }else{
